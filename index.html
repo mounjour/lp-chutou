@@ -126,7 +126,7 @@ if (PIXEL_ID) {
   document.querySelectorAll('a[data-cta]').forEach(function(a){
     if(keep.length){var u=new URL(a.href);keep.forEach(function(e){u.searchParams.set(e[0],e[1])});a.href=u.toString();}
     a.addEventListener('click',function(){
-      if(window.fbq) fbq('track','Lead');
+      if(window.fbq) fbq('track','CompleteRegistration');
       window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_id:a.getAttribute('data-cta')});
     });
   });
